@@ -1,0 +1,54 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #0F0E0E;
+}
+
+main{
+  position: relative;
+}
+
+input{
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 3px solid white;
+  font-size: 20px ;
+  color: white;
+  outline: none;
+}
+
+label{
+  position: absolute;
+  color: white;
+  display: flex;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+}
+
+label span{
+  transition: .3s var(--i) ease-in-out;
+
+}
+input:valid + label span,
+input:focus + label span{
+  transform: translateY(-25px);
+  color: cyan;
+}
+
+.line{
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: cyan;
+  bottom: 0;
+  transition: .5s;
+}
+input:valid + label + .line,
+input:focus + label + .line{
+  width: 100%;
+}
